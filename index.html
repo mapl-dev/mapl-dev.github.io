@@ -50,7 +50,7 @@
   }
   /* Scrolled state — background fades in */
   nav.scrolled {
-    background: rgba(250,250,248,0.96);
+    background: rgba(0,0,0,0.9);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
   }
@@ -331,6 +331,64 @@
   .feature-card:hover .feature-title { color: var(--gold); }
   .feature-desc { font-size: 13px; color: var(--ink-muted); line-height: 1.7; }
 
+  /* ── PLATFORM ARCHITECTURE ── */
+  .arch { padding: 5.5rem 3.5rem; border-bottom: 1px solid var(--border); }
+  .arch-header { max-width: 560px; margin-bottom: 3.5rem; }
+  .arch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .arch-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.2s;
+  }
+  .arch-card:hover { border-color: var(--gold); }
+  .arch-icon {
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+  .arch-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .arch-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+  .arch-desc {
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+  }
+  .arch-footer {
+    max-width: 720px;
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .arch-footer p {
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.8;
+    margin: 0;
+  }
+
   /* ── PHOTO BAND ── */
   .photo-band { position: relative; height: 460px; overflow: hidden; }
   .photo-band img { width: 100%; height: 100%; object-fit: cover; object-position: center 52%; }
@@ -491,6 +549,9 @@
     .feature-card:nth-child(n) { border-bottom: 1px solid var(--gold-border); }
     .feature-card:last-child { border-bottom: none; }
 
+    .arch { padding: 3.5rem 1.5rem; }
+    .arch-grid { grid-template-columns: 1fr; }
+
     .photo-band { height: 380px; }
     .photo-band-content { padding: 0 1.5rem; max-width: 100%; }
     .photo-band-overlay { background: linear-gradient(to top, rgba(10,14,10,0.9) 0%, rgba(10,14,10,0.5) 100%); }
@@ -524,8 +585,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-brand">
-            <img src="logo.webp" style="width: 185px;"/>
-
+      <img src="logo-dark.png" style="width: 185px;"/>
   </a>
   <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');">
     <span></span><span></span><span></span>
@@ -576,7 +636,7 @@
 
   <div class="hero-content">
     <p class="hero-tag">Equine Business Management</p>
-    <h1 class="hero-headline">Run your barn<br>like a <em>professional.</em></h1>
+    <h1 class="hero-headline">Run your stable<br>like a <em>professional.</em></h1>
     <p class="hero-sub">STABLE pro is the all-in-one invoicing and business management platform built exclusively for horse professionals. Set it up once, and get back to work.</p>
     <div class="hero-actions">
       <a href="https://app.stablepro.us" class="btn-primary">Launch STABLE pro</a>
@@ -586,16 +646,16 @@
 
   <div class="hero-stats">
     <div class="stat">
-      <span class="stat-num">&#x221E;</span>
+      <span class="stat-num">1,684</span>
       <span class="stat-label">Horses tracked</span>
     </div>
     <div class="stat">
-      <span class="stat-num">1</span>
-      <span class="stat-label">Platform for all</span>
+      <span class="stat-num">282</span>
+      <span class="stat-label">Trainers Registered</span>
     </div>
     <div class="stat">
-      <span class="stat-num">0</span>
-      <span class="stat-label">Stress guaranteed</span>
+      <span class="stat-num">324</span>
+      <span class="stat-label">Equestrians Registered</span>
     </div>
   </div>
 
@@ -631,14 +691,50 @@
 <div class="intro">
   <div class="intro-left">
     <p class="section-tag">What we do</p>
-    <h2 class="section-headline">We've perfected invoicing for horse professionals.</h2>
-    <p class="section-sub">From solo trainers to full boarding facilities — STABLE pro handles billing so you stay focused on your horses, not your paperwork. Configure once, collect every month.</p>
+    <h2 class="section-headline">STABLE pro is building the operating system for the equine industry.</h2>
+    <p class="section-sub">Today, horse professionals and owners rely on a patchwork of tools—text messages, spreadsheets, paper records, and generic software—to manage high-value animals and complex operations. This fragmentation creates inefficiencies, limits financial visibility, and makes it difficult to scale.<br/><br/>STABLE pro replaces that fragmentation with a single, purpose-built platform designed specifically for how the equine industry works.</p>
     <a href="https://app.stablepro.us" class="intro-cta">Start your free account</a>
   </div>
   <div class="intro-right">
     <img src="hunters-and-jumpers-1.jpg" alt="Horse in stable stall">
   </div>
 </div>
+
+<!-- PLATFORM ARCHITECTURE -->
+<section class="arch" id="architecture">
+  <div class="arch-header">
+    <p class="section-tag">Platform Architecture</p>
+    <h2 class="section-headline">At its core, STABLE pro combines three critical layers.</h2>
+  </div>
+  <div class="arch-grid">
+    <div class="arch-card">
+      <div class="arch-icon">
+       <img src="platform1.png"/>
+      </div>
+      <div class="arch-title">1. Horse-Centric Management</div>
+      <div class="arch-desc">Every horse has a complete digital profile—tracking care, medications, supplements, training schedules, events, expenses, and history. This creates a true system of record that travels with the horse across owners, trainers, and facilities.</div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-icon">
+           <img src="platform2.png"/>
+      </div>
+      <div class="arch-title">2. Integrated Business Suite</div>
+      <div class="arch-desc">From automated invoicing and payments to expense tracking, financial reporting, and analytics, STABLE pro gives professionals the tools to run and grow their operations efficiently—without relying on multiple disconnected systems.</div>
+    </div>
+    <div class="arch-card">
+      <div class="arch-icon">
+         <img src="platform3.png"/>
+      </div>
+      <div class="arch-title">3. Industry Connectivity</div>
+      <div class="arch-desc">STABLE pro connects owners, trainers, assistants, show managers, and associations in one shared ecosystem. This reduces communication friction, improves transparency, and enables a new level of coordination across the industry.</div>
+    </div>
+  </div>
+  <div class="arch-footer">
+    <p>The result is a platform that reduces administrative burden, improves financial clarity, and unlocks better decision-making at every level—from individual owners to large-scale operations.</p>
+    <p>As adoption grows, STABLE pro becomes more than software—it becomes the infrastructure layer powering a more connected, efficient, and scalable equine industry.</p>
+  </div>
+</section>
+
 
 <!-- FEATURES -->
 <section class="features" id="features">
@@ -702,6 +798,8 @@
     </div>
   </div>
 </section>
+
+
 
 <!-- PHOTO BAND — TESTIMONIAL -->
 <div class="photo-band">
@@ -793,12 +891,14 @@
   <div class="affiliates-divider"></div>
   <span class="affiliate-name">100X Shows</span>
   <div class="affiliates-divider"></div>
-  <span class="affiliate-name" style="color: var(--ink-faint); font-size:11px;">Supporting Ridely</span>
+  <span class="affiliate-name" style="color: var(--ink-faint); font-size:11px;">Supporting Horse Welfare</span>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-brand">STABLE <span>pro</span></span>
+  <span class="footer-brand">   
+    <img src="logo-dark.png" style="width: 185px;"/>
+  </span>
   <ul class="footer-links">
     <li><a href="https://stablepro.us/help">Help</a></li>
     <li><a href="https://stablepro.us/terms-%26-conditions">Terms</a></li>
