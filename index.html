@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STABLE pro — Equine Business Management</title>
+<title>STABLE pro — All-in-One Equine Platform</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -467,11 +467,14 @@
   .form-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
   /* Submit — green button */
   .form-submit {
+    display: block;
+    text-align: center;
     width: 100%; margin-top: 1.1rem;
     font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500;
     letter-spacing: 0.12em; text-transform: uppercase;
     background: var(--accent); color: white;
     border: none; padding: 13px; border-radius: 2px; cursor: pointer; transition: background 0.2s;
+    text-decoration: none;
   }
   .form-submit:hover { background: var(--accent-hover); }
   .form-note { font-size: 10px; color: rgba(255,255,255,0.3); text-align: center; margin-top: 0.7rem; }
@@ -635,9 +638,9 @@
   <button class="carousel-arrow next" onclick="carouselStep(1)" aria-label="Next">&#8594;</button>
 
   <div class="hero-content">
-    <p class="hero-tag">Equine Business Management</p>
+    <p class="hero-tag">Equine Management System</p>
     <h1 class="hero-headline">Run your stable<br>like a <em>professional.</em></h1>
-    <p class="hero-sub">STABLE pro is the all-in-one invoicing and business management platform built exclusively for horse professionals. Set it up once, and get back to work.</p>
+    <p class="hero-sub">STABLE Pro is the operating system for the equine industry—connecting horse management, business operations, and the entire network into one seamless platform. </p>
     <div class="hero-actions">
       <a href="https://app.stablepro.us" class="btn-primary">Launch STABLE pro</a>
       <a href="#features" class="btn-ghost">See features</a>
@@ -654,7 +657,7 @@
       <span class="stat-label">Trainers Registered</span>
     </div>
     <div class="stat">
-      <span class="stat-num">324</span>
+      <span class="stat-num">553</span>
       <span class="stat-label">Equestrians Registered</span>
     </div>
   </div>
@@ -852,8 +855,8 @@
     <img class="how-photo" src="hero.jpg" alt="Stable barn at sunrise">
     <div class="how-photo-overlay"></div>
     <div class="setup-card">
-      <div class="form-heading">Request onboarding help</div>
-      <div class="form-grid2">
+      <div class="form-heading">Need onboarding assistance?</div>
+      <!--<div class="form-grid2">
         <div class="form-row">
           <label class="form-label">First name</label>
           <input class="form-input" type="text" placeholder="Jane">
@@ -874,9 +877,8 @@
       <div class="form-row">
         <label class="form-label">Number of horses</label>
         <input class="form-input" type="number" placeholder="12">
-      </div>
-      <button class="form-submit">Request setup assistance &#x2192;</button>
-      <p class="form-note">Or email: Dexter@STABLEpro.us</p>
+      </div>-->
+      <a href="mailto:dexter@stablepro.us" class="form-submit">Contact Us &#x2192;</a>
     </div>
   </div>
 </div>
@@ -885,13 +887,13 @@
 <div class="affiliates" id="affiliates">
   <span class="affiliates-label">Platinum Affiliates</span>
   <div class="affiliates-divider"></div>
-  <span class="affiliate-name">East Texas Stock Horse Association</span>
+  <span class="affiliate-name">APHA</span>
   <div class="affiliates-divider"></div>
-  <span class="affiliate-name">American Paint Horse Association</span>
+  <span class="affiliate-name">100X</span>
   <div class="affiliates-divider"></div>
-  <span class="affiliate-name">100X Shows</span>
+  <span class="affiliate-name">NVQHA</span>
   <div class="affiliates-divider"></div>
-  <span class="affiliate-name" style="color: var(--ink-faint); font-size:11px;">Supporting Horse Welfare</span>
+  <span class="affiliate-name" style="color: var(--ink-faint); font-size:11px;"><a style="color: var(--ink-faint); font-size:11px;" href="https://ridely.com/introducing-the-horse-welfare-score" target="_blank">Supporting Horse Welfare</a></span>
 </div>
 
 <!-- FOOTER -->
